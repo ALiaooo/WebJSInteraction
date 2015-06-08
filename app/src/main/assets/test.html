@@ -1,0 +1,17 @@
+<body>
+<a>Web与Js交互:点击我，来调用客户端的show方法吧</a>
+<script>
+    function funFromjs(){
+    	document.getElementById("helloweb").innerHTML="我是JS里的方法";
+    }
+    var aTag = document.getElementsByTagName('a')[0];
+    aTag.addEventListener('click', function(){
+        //调用android本地方法
+		AppFunction.show("Js调用show()方法成功！");
+        return false;
+    }, false);
+    </script>
+<p></p>
+<div id="helloweb">
+</div>
+</body>
